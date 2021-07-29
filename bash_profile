@@ -7,6 +7,7 @@ vim()
     # osx users, use stty -g
     local STTYOPTS="$(stty -g)"
     stty stop '' -ixoff
-    command vim "$@"
+    command mvim -v "$@"
     stty "$STTYOPTS"
 }
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
